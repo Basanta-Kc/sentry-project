@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,500;1,300;1,700&family=Rubik:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/44425c5953.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Roboto";
+        font-size: 16px;
+        box-sizing: border-box;
+      }
+
+      main {
+        background: #f2f1f3 url("./images/bg-pattern.png");
+        background-size: 350px;
+        height: 100vh;
+      }
+
+      section {
+        width: 60%;
+        margin: auto;
+        padding: 5em;
+        display: flex;
+      }
+
+      .side-bar {
+        width: 7%;
+        background-color: #564f64;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+      }
+
+      .btn-auth {
+        font-weight: 500;
+        font-size: 1rem;
+        color: white;
+        padding: 0.8em 1em;
+        border-radius: 3px;
+        border: none;
+      }
+
+      .bg-google {
+        background-color: #f4b400;
+      }
+
+      .bg-facebook {
+        background-color: #4267b2;
+      }
+
+      .bg-github {
+        background-color: #4078c0;
+      }
+
+      .side-bar > img {
+        width: 100%;
+        margin-top: 1em;
+      }
+
+      .auth-container {
+        width: 93%;
+        background-color: white;
+        padding: 2em;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+        font-weight: 400;
+      }
+
+      .form-container {
+        margin-top: 2em;
+        margin-bottom: 1em;
+        display: flex;
+      }
+
+      .social-auth-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch;
+        width: 50%;
+        padding: 1em;
+        border-left: 1px solid grey;
+      }
+
+      .social-auth-container > button {
+        margin-bottom: 1em;
+      }
+
+      .auth-btn-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .auth-btn-container > a {
+        text-decoration: none;
+        color: grey;
+      }
+
+      .auth-btn-container > a:hover {
+        text-decoration: none;
+        color: darkgrey;
+      }
+
+      form {
+        padding-right: 1em;
+      }
+
+      input {
+        width: 100%;
+        margin-top: 0.5em;
+        margin-bottom: 1em;
+        height: 2.5em;
+        padding-left: 10px;
+      }
+
+      label {
+        font-size: 1.1rem;
+        font-weight: 500;
+      }
+
+      i {
+        margin-right: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section>
+        <div class="side-bar">
+          <img src="images/sentry-icon-logo.jpg" alt="" />
+        </div>
+        <div class="auth-container">
+          <h1>Sign in to continue</h1>
+
+          <div class="form-container">
+            <form action="">
+              <label for="username">Account</label>
+              <input
+                type="text"
+                name="username"
+                id="username"
+                placeholder="usernme"
+              />
+              <label for="password">Password</label>
+              <input type="password" name="password" />
+              <div class="auth-btn-container">
+                <button class="btn-auth bg-github">Continue</button>
+                <a href="#">Lost your password?</a>
+              </div>
+            </form>
+            <div class="social-auth-container">
+              <button class="btn-auth bg-google">
+                <i class="fa fa-google" aria-hidden="true"></i>
+                Sign in with google
+              </button>
+              <button class="btn-auth bg-facebook">
+                <i class="fa fa-facebook" aria-hidden="true"></i> Sign in with
+                google
+              </button>
+              <button class="btn-auth bg-github">
+                <i class="fa fa-github" aria-hidden="true"></i> Sign in with
+                google
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
