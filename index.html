@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,500;1,300;1,700&family=Rubik:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Sentry</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Rubik";
+      }
+
+      html {
+        font-size: 10px;
+      }
+
+      body {
+        background-color: #f6f6f8;
+      }
+
+      header {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 70%;
+        margin: 20px auto;
+        background-color: #f6f6f8;
+      }
+
+      .logo {
+        margin-right: auto;
+      }
+
+      .logo > img {
+        height: 40px;
+      }
+
+      .nav-list {
+        list-style: none;
+        display: flex;
+      }
+
+      .nav-list a {
+        font-size: 1.6rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #362d59;
+        font-weight: 500;
+      }
+
+      .nav-list li {
+        padding: 0 20px;
+      }
+
+      .btn {
+        font-weight: 500;
+        font-size: 1.4rem;
+        color: white;
+        padding: 0.8em 1em;
+        background-color: #e1567c;
+        border: none;
+        text-transform: uppercase;
+        border-radius: 2em;
+      }
+
+      .btn-text {
+        color: #e1567c;
+        background: none;
+      }
+
+      .btn-secondary {
+        font-size: 1.2rem;
+        background-color: #eeeef5;
+        color: #e1567c;
+      }
+
+      #hero-section {
+        background-image: url("images/hero-section-bg-image.jpg");
+        height: 100vh;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 1% 85%);
+      }
+
+      .container {
+        width: 70%;
+        margin: auto;
+      }
+
+      .header-main {
+        color: white;
+        font-size: 2rem;
+        padding: 1.4em 0;
+      }
+
+      .header-description {
+        color: white;
+        margin-bottom: 2em;
+        font-size: 1.6em;
+        width: 60%;
+        line-height: 1.8em;
+      }
+
+      .text-box-container {
+        display: flex;
+        justify-content: center;
+      }
+
+      .text-box-container > img {
+        height: 150px;
+      }
+
+      .weekly-box {
+        padding: 2em;
+        width: 50%;
+      }
+
+      .weekly-heading {
+        font-size: 2rem;
+        font-weight: 400;
+        margin-bottom: 0.5em;
+      }
+
+      .weekly-description {
+        font-size: 1.5rem;
+        line-height: 1.5em;
+      }
+
+      .card-row {
+        margin-top: 2em;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .card {
+        width: 49%;
+        background-color: white;
+      }
+
+      .card > img {
+        width: 100%;
+      }
+
+      .card-content {
+        padding: 1em;
+      }
+
+      .card-title {
+        font-size: 1.4rem;
+        margin-bottom: 1em;
+      }
+
+      .card-description {
+        font-size: 1.2rem;
+        line-height: 1.2em;
+        margin-bottom: 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a class="logo" href="/">
+        <img src="images/logo.png" alt="" />
+      </a>
+      <nav>
+        <ul class="nav-list">
+          <li>
+            <a href="#">Pricing</a>
+          </li>
+          <li><a href="#">Docs</a></li>
+          <li><a href="#">Resources</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Sign In</a></li>
+        </ul>
+      </nav>
+      <button class="btn">Get Started</button>
+    </header>
+
+    <section id="hero-section">
+      <div class="container">
+        <h1 class="header-main">Working Code, Happy customers</h1>
+        <p class="header-description">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+          impedit tempora commodi dignissimos blanditiis qui maiores,
+          exercitationem alias unde nihil!
+        </p>
+        <p class="header-description">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis
+          harum dicta nulla deleniti quod magnam laudantium ad fuga? Officia,
+          ipsam!
+        </p>
+        <button class="btn">Try Sentry for Free</button>
+        <button class="btn btn-text">Request A Demo</button>
+      </div>
+    </section>
+
+    <section id="weekly-drops">
+      <div class="text-box-container">
+        <img src="images/speaker.png" alt="" />
+        <div class="weekly-box">
+          <h2 class="weekly-heading">Weekly Drops From Sentry</h2>
+          <p class="weekly-description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam sit
+            veritatis provident aspernatur error distinctio quae explicabo,
+            debitis repudiandae! Molestias?
+          </p>
+        </div>
+      </div>
+      <div class="container card-row">
+         <div class="card">
+          <img src="images/mouse.jfif" alt="" />
+          <div class="card-content">
+            <h3 class="card-title">Mobile: The Future is Declarative</h3>
+            <p class="card-description">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio
+              iusto iste inventore minus ullam perspiciatis, doloremque sint
+              odit eaque animi.
+            </p>
+            <button class="btn btn-secondary">Learn More ></button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/mouse.jfif" alt="" />
+          <div class="card-content">
+            <h3 class="card-title">Mobile: The Future is Declarative</h3>
+            <p class="card-description">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio
+              iusto iste inventore minus ullam perspiciatis, doloremque sint
+              odit eaque animi.
+            </p>
+            <button class="btn btn-secondary">Learn More ></button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
