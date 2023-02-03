@@ -20,7 +20,7 @@
       }
 
       html {
-        font-size: 10px;
+        font-size: 18px;
       }
 
       body {
@@ -63,7 +63,7 @@
 
       .btn {
         font-weight: 500;
-        font-size: 1.4rem;
+        font-size: 1.1rem;
         color: white;
         padding: 0.8em 1em;
         background-color: #e1567c;
@@ -94,13 +94,19 @@
       }
 
       .btn-sm {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
       }
 
       #hero-section {
-        background-image: url("images/hero-section-bg-image.jpg");
+        background: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.1)
+          ),
+          url("images/hero-section-bg-image.jpg");
         height: 100vh;
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 1% 85%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 75%);
+        /* https://bennettfeely.com/clippy/ */
       }
 
       .container {
@@ -213,8 +219,8 @@
 
       .feature-heading {
         text-align: center;
-        font-weight: 300;
-        font-size: 1.8rem;
+        font-weight: 400;
+        font-size: 1.9rem;
       }
 
       .feature-description {
@@ -223,6 +229,7 @@
         text-transform: uppercase;
         color: grey;
         margin-bottom: 2em;
+        letter-spacing: 2px;
       }
 
       .feature-container {
@@ -240,26 +247,152 @@
         width: 45%;
       }
 
-      .feature-content-heading {
-        font-size: 1.6rem;
+      .content-heading {
+        font-size: 1.7rem;
         font-weight: 400;
       }
 
-      .feature-content-description {
+      .content-description {
         font-size: 1.2rem;
         margin-top: 1em;
         margin-bottom: 1em;
         line-height: 1.5em;
       }
+
+      #enterprise-section {
+        background-color: white;
+        padding: 2em;
+      }
+
+      .enterprise-container {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .enterpise-col {
+        width: 32%;
+      }
+
+      #support-section {
+        padding: 1em;
+      }
+
+      .support-grid {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        gap: 1.5em;
+      }
+
+      .support-grid > img {
+        width: 100%;
+      }
+
+      .mb-1 {
+        margin-bottom: 1em;
+      }
+
+      .mb-2 {
+        margin-bottom: 2em;
+      }
+
+      .enterprise-grid-container {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        gap: 1em;
+      }
+
+      footer {
+        background-color: white;
+        padding: 2em;
+      }
+
+      footer > p {
+        font-size: 1.2em;
+        text-align: center;
+      }
+
+      .sm-screen {
+        display: none;
+      }
+
+      @media (max-width: 1000px) {
+        .lg-screen {
+          display: none;
+        }
+
+        .sm-screen {
+          display: block;
+        }
+
+        .header-description {
+          width: 100%;
+        }
+
+        .card-row {
+          flex-direction: column;
+        }
+
+        .card {
+          width: 100%;
+          margin-bottom: 2em;
+        }
+
+        .customer-container {
+          width: 75%;
+        }
+
+        .feature-container,
+        .enterprise-container {
+          flex-direction: column;
+        }
+
+        .feature-container > img {
+          width: 100%;
+        }
+
+        .feature-content,
+        .enterpise-col {
+          width: 100%;
+          margin-bottom: 2em;
+        }
+
+        .sm-col-reverse {
+          flex-direction: column-reverse;
+        }
+
+        .enterprise-grid-container {
+          grid-template-columns: 1fr;
+        }
+
+        .support-grid {
+          grid-template-columns: repeat(6, 1fr);
+        }
+      }
+
+      .test {
+        padding: 20px;
+        font-size: 20px;
+      }
+      .test::before {
+        content: open-quote;
+        color: red;
+      }
+
+      .test::after {
+        content: close-quote;
+        color: blue;
+      }
+
     </style>
   </head>
   <body>
     <header>
+
       <a class="logo" href="/">
         <img src="images/logo.png" alt="" />
       </a>
       <nav>
-        <ul class="nav-list">
+        <ul class="nav-list lg-screen">
           <li>
             <a href="#">Pricing</a>
           </li>
@@ -269,7 +402,8 @@
           <li><a href="#">Sign In</a></li>
         </ul>
       </nav>
-      <button class="btn">Get Started</button>
+      <button class="btn lg-screen">Get Started</button>
+      <button class="btn sm-screen">Menu</button>
     </header>
 
     <section id="hero-section">
@@ -382,8 +516,8 @@
       <p class="feature-description">sentry provides answers</p>
       <div class="container feature-container">
         <div class="feature-content">
-          <h3 class="feature-content-heading">Context Uncovered</h3>
-          <p class="feature-content-description">
+          <h3 class="content-heading">Context Uncovered</h3>
+          <p class="content-description">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit.
             Voluptatum, fuga.
           </p>
@@ -391,11 +525,11 @@
         </div>
         <img src="images/images/context.webp" alt="" />
       </div>
-      <div class="container feature-container">
+      <div class="container feature-container sm-col-reverse">
         <img src="images/images/context.webp" alt="" />
         <div class="feature-content">
-          <h3 class="feature-content-heading">Queries, customized</h3>
-          <p class="feature-content-description">
+          <h3 class="content-heading">Queries, customized</h3>
+          <p class="content-description">
             Real-time application monitoring means data, in real-time. Query raw
             event data across your organization with Discover, Sentry’s query
             builder
@@ -404,5 +538,109 @@
         </div>
       </div>
     </section>
+
+    <section id="enterprise-section">
+      <p class="feature-description mb-1">ENTERPRISE APPLICATION MONITORING</p>
+      <h2 class="feature-heading mb-1">Sentry for Enterprise</h2>
+      <div class="enterprise-container container mb-1">
+        <div class="enterpise-col">
+          <h3 class="content-heading">Corss-functional Visibility</h3>
+          <p class="content-description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero quod
+            iure rem aliquid veritatis. Velit dolorum similique vitae
+            repudiandae unde.
+          </p>
+        </div>
+        <div class="enterpise-col">
+          <h3 class="content-heading">Corss-functional Visibility</h3>
+          <p class="content-description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero quod
+            iure rem aliquid veritatis. Velit dolorum similique vitae
+            repudiandae unde.
+          </p>
+        </div>
+        <div class="enterpise-col">
+          <h3 class="content-heading">Corss-functional Visibility</h3>
+          <p class="content-description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero quod
+            iure rem aliquid veritatis. Velit dolorum similique vitae
+            repudiandae unde.
+          </p>
+        </div>
+      </div>
+      <div class="btn-container">
+        <button class="btn">See Our Customers</button>
+      </div>
+    </section>
+
+    <section id="enterprise-section">
+      <p class="feature-description mb-1">ENTERPRISE APPLICATION MONITORING</p>
+      <h2 class="feature-heading mb-1">Sentry for Enterprise</h2>
+      <div class="enterprise-grid-container container mb-1">
+        <div>
+          <h3 class="content-heading">Corss-functional Visibility</h3>
+          <p class="content-description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero quod
+            iure rem aliquid veritatis. Velit dolorum similique vitae
+            repudiandae unde.
+          </p>
+        </div>
+        <div>
+          <h3 class="content-heading">Corss-functional Visibility</h3>
+          <p class="content-description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero quod
+            iure rem aliquid veritatis. Velit dolorum similique vitae
+            repudiandae unde.
+          </p>
+        </div>
+        <div>
+          <h3 class="content-heading">Corss-functional Visibility</h3>
+          <p class="content-description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero quod
+            iure rem aliquid veritatis. Velit dolorum similique vitae
+            repudiandae unde.
+          </p>
+        </div>
+      </div>
+      <div class="btn-container">
+        <button class="btn">See Our Customers</button>
+      </div>
+    </section>
+
+    <section id="support-section">
+      <p class="feature-description mb-1">IF YOU USE IT</p>
+      <h2 class="feature-heading mb-1">We probably support it</h2>
+      <div class="support-grid container mb-2">
+        <img src="images/supports/android.webp" alt="" />
+        <img src="images/supports/apple.webp" alt="" />
+        <img src="images/supports/django.webp" alt="" />
+        <img src="images/supports/dotnet.webp" alt="" />
+        <img src="images/supports/flutter.webp" alt="" />
+        <img src="images/supports/django.webp" alt="" />
+        <img src="images/supports/github.webp" alt="" />
+        <img src="images/supports/gitlab.webp" alt="" />
+        <img src="images/supports/javascript.webp" alt="" />
+        <img src="images/supports/django.webp" alt="" />
+        <img src="images/supports/dotnet.webp" alt="" />
+        <img src="images/supports/flutter.webp" alt="" />
+        <img src="images/supports/django.webp" alt="" />
+        <img src="images/supports/github.webp" alt="" />
+        <img src="images/supports/gitlab.webp" alt="" />
+        <img src="images/supports/javascript.webp" alt="" />
+        <img src="images/supports/django.webp" alt="" />
+        <img src="images/supports/dotnet.webp" alt="" />
+        <img src="images/supports/flutter.webp" alt="" />
+        <img src="images/supports/django.webp" alt="" />
+        <img src="images/supports/github.webp" alt="" />
+        <img src="images/supports/github.webp" alt="" />
+        <img src="images/supports/gitlab.webp" alt="" />
+        <img src="images/supports/javascript.webp" alt="" />
+      </div>
+    </section>
+
+    <p class="test">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, quibusdam!</p>
+    <footer>
+      <p>All rights reserved 2023 &copy; Sentry Corportation</p>
+    </footer>
   </body>
 </html>

@@ -22,7 +22,7 @@
       }
 
       html {
-        font-size: 7px;
+        font-size: 12px;
       }
 
       main {
@@ -32,7 +32,7 @@
       }
 
       section {
-        width: 80%;
+        width: 50%;
         margin: auto;
         padding: 5em;
         display: flex;
@@ -68,7 +68,7 @@
       }
 
       form {
-        padding-right: 2em;
+        padding-right: 1em;
       }
 
       input {
@@ -90,7 +90,12 @@
         align-items: center;
       }
 
-       .btn {
+      .auth-btn-container > a {
+        color: grey;
+        text-decoration: none;
+      }
+
+      .btn {
         font-weight: 500;
         font-size: 1rem;
         color: white;
@@ -101,6 +106,58 @@
         text-transform: uppercase;
       }
 
+      .social-auth-container {
+        display: flex;
+        flex-direction: column;
+        padding: 1em;
+        width: 50%;
+        border-left: 1px solid grey;
+      }
+
+      .social-auth-container > button {
+        margin-bottom: 1em;
+      }
+
+      .bg-google {
+        background-color: #f4b400;
+      }
+
+      .bg-facebook {
+        background-color: #4267b2;
+      }
+
+      .bg-github {
+        background-color: #4078c0;
+      }
+
+      /* Extra small devices (phones, 600px and down) */
+      @media only screen and (max-width: 600px) {
+        section {
+          width: 90%;
+        }
+      }
+      /* Small devices (portrait tablets and large phones, 600px and up) */
+      @media only screen and (min-width: 600px) {
+        section {
+          width: 90%;
+        }
+      }
+      /* Medium devices (landscape tablets, 768px and up) */
+      @media only screen and (min-width: 768px) {
+        section {
+          width: 80%;
+        }
+      }
+      /* Large devices (laptops/desktops, 992px and up) */
+      @media only screen and (min-width: 992px) {
+        section {
+          width: 50%;
+        }
+      }
+
+      /* Extra large devices (large laptops and desktops, 1200px and up) */
+      @media only screen and (min-width: 1200px) {
+      }
     </style>
   </head>
   <body>
@@ -120,30 +177,30 @@
                 type="text"
                 name="username"
                 id="username"
-                placeholder="username"
+                placeholder="Username"
               />
               <label for="password">Password</label>
               <input
                 type="text"
                 name="password"
                 id="password"
-                placeholder="password"
+                placeholder="Password"
               />
               <div class="auth-btn-container">
-                <button class="btn" type="submit">Continue</button>
-                <a href="#">Lost your password</a>
+                <button class="btn bg-github" type="submit">Continue</button>
+                <a href="#">Lost your password ?</a>
               </div>
             </form>
             <div class="social-auth-container">
-              <button>
+              <button class="btn bg-google">
                 <i class="fa fa-google"></i>
                 Sign In with google
               </button>
-              <button>
+              <button class="btn bg-facebook">
                 <i class="fa fa-facebook"></i>
                 Sign In with facebook
               </button>
-              <button>
+              <button class="btn bg-github">
                 <i class="fa fa-github"></i>
                 Sign In with github
               </button>
