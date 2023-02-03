@@ -98,9 +98,16 @@
       }
 
       #hero-section {
-        background-image: url("images/hero-section-bg-image.jpg");
+        background: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0)
+          ),
+          url("images/hero-section-bg-image.jpg");
+        /* angle degree */
+        /* background: linear-gradient(to bottom right,red, blue),url("images/hero-section-bg-image.jpg");  */
         height: 100vh;
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 1% 85%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 85%);
       }
 
       .container {
@@ -251,6 +258,150 @@
         margin-bottom: 1em;
         line-height: 1.5em;
       }
+
+      #enterprise-section {
+        background-color: white;
+        padding: 2em;
+      }
+
+      .enterprise-container {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .enterprise-blocks {
+        width: 32%;
+      }
+
+      .mb-1 {
+        margin-bottom: 1em;
+      }
+
+      .mb-2 {
+        margin-bottom: 2em;
+      }
+
+      #support-section {
+        padding: 2em;
+      }
+
+      .support-grid {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 2em;
+      }
+
+      .support-grid > img {
+        width: 100%;
+      }
+
+      footer {
+        background-color: white;
+      }
+
+      footer > p {
+        padding: 2em;
+        text-align: center;
+        font-size: 1.7em;
+      }
+
+      /* grid */
+      .grid-span-2 {
+        grid-column: span 2;
+      }
+
+      .grid-container {
+        display: grid;
+        /* grid-template-columns: 33% 33% 33%; */
+        /* grid-template-columns: 1fr 2fr 3fr; */
+        /* grid-template-columns: repeat(3,100px); */
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1em;
+      }
+
+      .sm-screen {
+        display: none;
+      }
+
+      @media (max-width: 1000px) {
+        .grid-container {
+          grid-template-columns: 1fr;
+        }
+
+        .support-grid {
+          grid-template-columns: repeat(3, 1fr);
+          gap: 2em;
+        }
+
+        .feature-container {
+          flex-direction: column;
+        }
+
+        .feature-container > img {
+          width: 100%;
+        }
+
+        .feature-content {
+          width: 100%;
+          margin-bottom: 2em;
+        }
+
+        .sm-reverse {
+          flex-direction: column-reverse;
+        }
+
+        .lg-screen {
+          display: none;
+        }
+
+        .sm-screen {
+          display: inline;
+        }
+
+        #hero-section {
+          background-image: none;
+          background-color: #310d2f;
+          height: auto;
+          clip-path: none;
+          padding: 3em;
+          margin-bottom: 2em;
+        }
+
+        .header-description,
+        .header-main {
+          width: 100%;
+        }
+      }
+
+      /* Extra small devices (phones, 600px and down) */
+      @media only screen and (max-width: 600px) {
+      }
+      /* Small devices (portrait tablets and large phones, 600px and up) */
+      @media only screen and (min-width: 600px) {
+      }
+      /* Medium devices (landscape tablets, 768px and up) */
+      @media only screen and (min-width: 768px) {
+      }
+      /* Large devices (laptops/desktops, 992px and up) */
+      @media only screen and (min-width: 992px) {
+      }
+      /* Extra large devices (large laptops and desktops, 1200px and up) */
+      @media only screen and (min-width: 1200px) {
+      }
+
+      #testimonal-section {
+        font-size: 2em;
+        background-color: white;
+        padding: 2em;
+      }
+
+      .testimonal-text::before {
+        content: open-quote;
+      }
+
+      .testimonal-text::after {
+        content: close-quote;
+      }
     </style>
   </head>
   <body>
@@ -258,7 +409,7 @@
       <a class="logo" href="/">
         <img src="images/logo.png" alt="" />
       </a>
-      <nav>
+      <nav class="lg-screen">
         <ul class="nav-list">
           <li>
             <a href="#">Pricing</a>
@@ -269,7 +420,8 @@
           <li><a href="#">Sign In</a></li>
         </ul>
       </nav>
-      <button class="btn">Get Started</button>
+      <button class="btn lg-screen">Get Started</button>
+      <button class="btn sm-screen">Menu</button>
     </header>
 
     <section id="hero-section">
@@ -391,7 +543,7 @@
         </div>
         <img src="images/images/context.webp" alt="" />
       </div>
-      <div class="container feature-container">
+      <div class="container feature-container sm-reverse">
         <img src="images/images/context.webp" alt="" />
         <div class="feature-content">
           <h3 class="feature-content-heading">Queries, customized</h3>
@@ -404,5 +556,111 @@
         </div>
       </div>
     </section>
+
+    <section id="enterprise-section">
+      <p class="feature-description mb-1">ENTERPRISE APPLICATION MONITORING</p>
+      <h2 class="feature-heading mb-1">Sentry for Enterprise</h2>
+      <div class="container enterprise-container">
+        <div class="enterprise-blocks">
+          <h3 class="mb-1">Cross-functional visibility</h3>
+          <p class="feature-content-description">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga
+            itaque minima rerum voluptates obcaecati reiciendis corrupti
+            temporibus eum, ab labore?
+          </p>
+        </div>
+        <div class="enterprise-blocks mb-2">
+          <h3 class="mb-1">Cross-functional visibility</h3>
+          <p class="feature-content-description">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga
+            itaque minima rerum voluptates obcaecati reiciendis corrupti
+            temporibus eum, ab labore?
+          </p>
+        </div>
+        <div class="enterprise-blocks">
+          <h3 class="mb-1">Cross-functional visibility</h3>
+          <p class="feature-content-description">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga
+            itaque minima rerum voluptates obcaecati reiciendis corrupti
+            temporibus eum, ab labore?
+          </p>
+        </div>
+      </div>
+      <div class="btn-container">
+        <button class="btn">Try Sentry For Free</button>
+      </div>
+    </section>
+
+    <section id="enterprise-section">
+      <p class="feature-description mb-1">ENTERPRISE APPLICATION MONITORING</p>
+      <h2 class="feature-heading mb-1">Sentry for Enterprise</h2>
+      <div class="container grid-container">
+        <div class="grid-item">
+          <h3 class="mb-1">Cross-functional visibility</h3>
+          <p class="feature-content-description">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga
+            itaque minima rerum voluptates obcaecati reiciendis corrupti
+            temporibus eum, ab labore?
+          </p>
+        </div>
+        <div class="grid-item grid-span-2">
+          <h3 class="mb-1">Cross-functional visibility</h3>
+          <p class="feature-content-description">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga
+            itaque minima rerum voluptates obcaecati reiciendis corrupti
+            temporibus eum, ab labore?
+          </p>
+        </div>
+        <div class="grid-item">
+          <h3 class="mb-1">Cross-functional visibility</h3>
+          <p class="feature-content-description">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga
+            itaque minima rerum voluptates obcaecati reiciendis corrupti
+            temporibus eum, ab labore?
+          </p>
+        </div>
+      </div>
+      <div class="btn-container">
+        <button class="btn">Try Sentry For Free</button>
+      </div>
+    </section>
+
+    <section id="support-section">
+      <p class="feature-description mb-1">IF YOU USE IT</p>
+      <h2 class="feature-heading mb-1">We probably support it</h2>
+      <div class="support-grid container">
+        <img src="images/android.webp" alt="" />
+        <img src="images/android.webp" alt="" />
+        <img src="images/android.webp" alt="" />
+        <img src="images/android.webp" alt="" />
+        <img src="images/android.webp" alt="" />
+        <img src="images/android.webp" alt="" />
+        <img src="images/android.webp" alt="" />
+        <img src="images/android.webp" alt="" />
+        <img src="images/android.webp" alt="" />
+        <img src="images/android.webp" alt="" />
+        <img src="images/android.webp" alt="" />
+        <img src="images/android.webp" alt="" />
+        <img src="images/android.webp" alt="" />
+        <img src="images/android.webp" alt="" />
+        <img src="images/android.webp" alt="" />
+        <img src="images/android.webp" alt="" />
+        <img src="images/android.webp" alt="" />
+        <img src="images/android.webp" alt="" />
+      </div>
+    </section>
+
+    <section id="testimonal-section">
+      <h2 class="feature-heading mb-1">What our customer says ?</h2>
+      <div class="container"></div>
+      <p class="testimonal-text">
+        Lorem ipsum dolor sit amet consectetur 
+      </p>
+      <p>- Basanta Kc</p>
+    </section>
+
+    <footer>
+      <p>All rights reserved 2023 &copy; Sentry Corporation</p>
+    </footer>
   </body>
 </html>
