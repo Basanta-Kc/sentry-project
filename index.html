@@ -83,6 +83,20 @@
         color: #e1567c;
       }
 
+      .btn-container {
+        display: flex;
+        justify-content: center;
+      }
+
+      .btn-customers {
+        color: #e1567c;
+        background-color: rgba(54, 45, 89, 0.5);
+      }
+
+      .btn-sm {
+        font-size: 0.8rem;
+      }
+
       #hero-section {
         background-image: url("images/hero-section-bg-image.jpg");
         height: 100vh;
@@ -142,10 +156,12 @@
       .card {
         width: 49%;
         background-color: white;
+        border-radius: 10px;
       }
 
       .card > img {
         width: 100%;
+        border-radius: 10px 10px 0px 0px;
       }
 
       .card-content {
@@ -161,6 +177,79 @@
         font-size: 1.2rem;
         line-height: 1.2em;
         margin-bottom: 1em;
+      }
+
+      #customer-section {
+        margin-top: 3em;
+        padding: 3em;
+        background-color: #452650;
+        background-image: url("images/images/sentry-bg-pattern.png");
+        background-size: 300px;
+      }
+
+      .customer-heading {
+        color: white;
+        text-align: center;
+        font-weight: 400;
+      }
+
+      .customer-container {
+        width: 50%;
+        margin: 1em auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      .customer-container > img {
+        width: 15%;
+        margin: 1.6em;
+      }
+
+      #feature-section {
+        padding: 2em;
+        padding-top: 4em;
+      }
+
+      .feature-heading {
+        text-align: center;
+        font-weight: 300;
+        font-size: 1.8rem;
+      }
+
+      .feature-description {
+        text-align: center;
+        margin-top: 1.2em;
+        text-transform: uppercase;
+        color: grey;
+        margin-bottom: 2em;
+      }
+
+      .feature-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 6em;
+      }
+
+      .feature-container > img {
+        width: 45%;
+      }
+
+      .feature-content {
+        width: 45%;
+      }
+
+      .feature-content-heading {
+        font-size: 1.6rem;
+        font-weight: 400;
+      }
+
+      .feature-content-description {
+        font-size: 1.2rem;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        line-height: 1.5em;
       }
     </style>
   </head>
@@ -214,7 +303,7 @@
         </div>
       </div>
       <div class="container card-row">
-         <div class="card">
+        <div class="card">
           <img src="images/mouse.jfif" alt="" />
           <div class="card-content">
             <h3 class="card-title">Mobile: The Future is Declarative</h3>
@@ -237,6 +326,81 @@
             </p>
             <button class="btn btn-secondary">Learn More ></button>
           </div>
+        </div>
+      </div>
+      <div class="container card-row">
+        <div class="card">
+          <img src="images/mouse.jfif" alt="" />
+          <div class="card-content">
+            <h3 class="card-title">Mobile: The Future is Declarative</h3>
+            <p class="card-description">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio
+              iusto iste inventore minus ullam perspiciatis, doloremque sint
+              odit eaque animi.
+            </p>
+            <button class="btn btn-secondary">Learn More ></button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/mouse.jfif" alt="" />
+          <div class="card-content">
+            <h3 class="card-title">Mobile: The Future is Declarative</h3>
+            <p class="card-description">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio
+              iusto iste inventore minus ullam perspiciatis, doloremque sint
+              odit eaque animi.
+            </p>
+            <button class="btn btn-secondary">Learn More ></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="customer-section">
+      <h2 class="customer-heading">These folks get it.</h2>
+      <div class="customer-container">
+        <img src="images/images/stripe.svg" alt="" />
+        <img src="images/images/pinterest.svg" alt="" />
+        <img src="images/images/stripe.svg" alt="" />
+        <img src="images/images/pinterest.svg" alt="" />
+        <img src="images/images/stripe.svg" alt="" />
+        <img src="images/images/pinterest.svg" alt="" />
+        <img src="images/images/stripe.svg" alt="" />
+        <img src="images/images/pinterest.svg" alt="" />
+        <img src="images/images/stripe.svg" alt="" />
+        <img src="images/images/stripe.svg" alt="" />
+        <img src="images/images/pinterest.svg" alt="" />
+        <img src="images/images/stripe.svg" alt="" />
+      </div>
+      <div class="btn-container">
+        <button class="btn btn-customers">See Our Customers</button>
+      </div>
+    </section>
+
+    <section id="feature-section">
+      <h2 class="feature-heading">At best, users and logs provide clues</h2>
+      <p class="feature-description">sentry provides answers</p>
+      <div class="container feature-container">
+        <div class="feature-content">
+          <h3 class="feature-content-heading">Context Uncovered</h3>
+          <p class="feature-content-description">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Voluptatum, fuga.
+          </p>
+          <button class="btn btn-sm">SEE A SAMPLE STACK TRACE</button>
+        </div>
+        <img src="images/images/context.webp" alt="" />
+      </div>
+      <div class="container feature-container">
+        <img src="images/images/context.webp" alt="" />
+        <div class="feature-content">
+          <h3 class="feature-content-heading">Queries, customized</h3>
+          <p class="feature-content-description">
+            Real-time application monitoring means data, in real-time. Query raw
+            event data across your organization with Discover, Sentry’s query
+            builder
+          </p>
+          <button class="btn btn-sm">SEE A SAMPLE STACK TRACE</button>
         </div>
       </div>
     </section>
