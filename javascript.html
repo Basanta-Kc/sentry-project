@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <style></style>
+  </head>
+  <body>
+    <script src="test.js"></script>
+    <script>
+      // console.log("hello world!!")
+      // alert("hello world!!")
+      // let, var , const
+      // const PII = 3.13
+      // const colorRed = "red";
+
+      // let name = "Basanta Kc";
+      // const NAME = "BASANTA KHATRI"
+      // const greetingText = "My name is " + name;
+      // const age = 9;
+      // const isNepali = true;
+
+      // console.log(name, NAME)
+      // console.log(greetingText);
+
+      // const length = 20;
+      // const radius = 3.13;
+
+      // name = "Basanta Khatri Cheetri"
+
+      // isNepali = false;
+      const name = prompt("Your Name?", "Basanta kc") // string
+      const age = prompt("Your age ?"); // number
+      const weight = 65.34; // number
+      const isMale = confirm("Are you male?"); // boolean
+      const salary = 10000000000000000000000000000000000n;
+
+      let schoolName; // undefined
+      let collegeName = null;
+
+      console.log(typeof name);
+      console.log(typeof age);
+      console.log(typeof weight);
+      console.log(typeof isMale);
+      console.log(typeof schoolName);
+      console.log(typeof collegeName);
+
+      const person = {
+        name: "Basanta",
+        age: 12,
+        weight: 32,
+        school: "NBGS",
+      };
+
+      console.log(typeof person)
+
+      const greeting = "hello wolrd " + name + "Your age is: " + age ;
+      const greeting2 = 'hello world' + name;
+      const greeting3 = `Good Morning ${name}. Your age is ${age}. Your are Male : ${isMale}`
+      console.log(greeting3)
+    </script>
+  </body>
+</html>
